@@ -1,15 +1,7 @@
-#
-# Be sure to run `pod lib lint BUKMessageBarManager.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'BUKMessageBarManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BUKMessageBarManager.'
+  s.summary          = 'a drop down message bar'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,12 +9,9 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'a drop down message bar like notification'
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/BUKMessageBarManager'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/iException/BUKMessageBarManager'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'monzy613' => 'monzy613@gmail.com' }
   s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/BUKMessageBarManager.git', :tag => s.version.to_s }
