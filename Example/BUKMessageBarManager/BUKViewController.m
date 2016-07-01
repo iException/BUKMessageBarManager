@@ -7,6 +7,7 @@
 //
 
 #import "BUKViewController.h"
+#import "BUKMessageBarManager/BUKMessageBarManager.h"
 
 @interface BUKViewController ()
 
@@ -17,13 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)toggle:(id)sender {
+    [BUKMessageBarManager showMessageWithTitle:@"/home" detail:@"home view did selectedhome view did selectedhome view did selected" duration:2.0];
 }
-
 @end

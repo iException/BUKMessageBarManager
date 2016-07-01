@@ -1,0 +1,16 @@
+PODS:
+  - BUKMessageBarManager (0.1.0)
+
+DEPENDENCIES:
+  - BUKMessageBarManager (from `../`)
+
+EXTERNAL SOURCES:
+  BUKMessageBarManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BUKMessageBarManager: ff7aa8fd389c65c421cc6c635b23e59d6dca44c4
+
+PODFILE CHECKSUM: 23254d04bebb5d061049345b2e28622b0761a62e
+
+COCOAPODS: 1.0.1
