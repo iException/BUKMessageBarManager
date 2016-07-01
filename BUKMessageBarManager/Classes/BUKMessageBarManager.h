@@ -15,8 +15,10 @@
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                       detail:(NSString *)detail 
                                 buttons:(NSArray<UIButton *> *)buttons 
+                                handler:(void (^)(UIButton *button, NSInteger buttonIndex))block
                                    type:(BUKMessageBarType)type
-                    duration:(NSTimeInterval)duration;
+                               duration:(NSTimeInterval)duration;
+
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
                                    type:(BUKMessageBarType)type

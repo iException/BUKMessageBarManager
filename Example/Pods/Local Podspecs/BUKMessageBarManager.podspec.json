@@ -1,9 +1,9 @@
 {
   "name": "BUKMessageBarManager",
   "version": "0.1.0",
-  "summary": "A short description of BUKMessageBarManager.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/BUKMessageBarManager",
+  "summary": "a drop down message bar",
+  "description": "a drop down message bar like notification",
+  "homepage": "https://github.com/iException/BUKMessageBarManager",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "7.0"
   },
-  "source_files": "BUKMessageBarManager/Classes/**/*"
+  "source_files": "BUKMessageBarManager/Classes/**/*",
+  "dependencies": {
+    "BlocksKit": [
+
+    ]
+  }
 }

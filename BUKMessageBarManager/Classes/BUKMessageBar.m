@@ -7,6 +7,7 @@
 //
 
 #import "BUKMessageBar.h"
+#import "UIControl+BlocksKit.h"
 
 #define kStatusBarHeight 20.0
 #define kButtonHeight 35.0
@@ -25,7 +26,9 @@
 
 #pragma mark - lifecycle -
 
-- (instancetype)initWithTitle:(NSString *)title detail:(NSString *)detail type:(BUKMessageBarType)type
+- (instancetype)initWithTitle:(NSString *)title 
+                       detail:(NSString *)detail 
+                         type:(BUKMessageBarType)type
 {
     self = [super init];
     if (self) {
@@ -35,13 +38,18 @@
     return self;
 }
 
-- (instancetype)initWithTitle:(NSString *)title detail:(NSString *)detail buttons:(NSArray<UIButton *> *)buttons type:(BUKMessageBarType)type
+- (instancetype)initWithTitle:(NSString *)title 
+                       detail:(NSString *)detail 
+                      buttons:(NSArray<UIButton *> *)buttons 
+                      handler:(void (^)(UIButton *button, NSInteger buttonIndex))block
+                         type:(BUKMessageBarType)type
 {
     self = [super init];
     if (self) {
         self.buttons = buttons;
         self.type = type;
         [self initUIWithTitle:title detail:detail];
+        [self setupButtonAction:block];
     }
     return self;
 }
@@ -52,6 +60,18 @@
     self.detailLabel.text = detail;
     [self addSubvews];
     [self setupFrame];
+}
+
+- (void)setupButtonAction:(void (^)(UIButton *button, NSInteger buttonIndex))block
+{
+    if (!block) {
+        return;
+    }
+    [self.buttons enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj bk_addEventHandler:^(id sender) {
+            block(obj, idx);
+        } forControlEvents:UIControlEventTouchUpInside];
+    }];
 }
 
 - (void)showAnimated:(BOOL)animated completion:(void (^)())completion

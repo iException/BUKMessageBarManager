@@ -1,5 +1,21 @@
 PODS:
-  - BUKMessageBarManager (0.1.0)
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BUKMessageBarManager (0.1.0):
+    - BlocksKit
 
 DEPENDENCIES:
   - BUKMessageBarManager (from `../`)
@@ -9,7 +25,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BUKMessageBarManager: ff7aa8fd389c65c421cc6c635b23e59d6dca44c4
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  BUKMessageBarManager: 76935c4616e69ae8eac4bab07a2f9f51f558fa9f
 
 PODFILE CHECKSUM: 23254d04bebb5d061049345b2e28622b0761a62e
 

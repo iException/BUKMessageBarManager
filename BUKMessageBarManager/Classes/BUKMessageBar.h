@@ -21,8 +21,14 @@ typedef NS_ENUM(NSInteger, BUKMessageBarType) {
 @property (nonatomic, assign) BOOL isShow;
 @property (nonatomic, assign) BUKMessageBarType type;
 
-- (instancetype)initWithTitle:(NSString *)title detail:(NSString *)detail type:(BUKMessageBarType)type;
-- (instancetype)initWithTitle:(NSString *)title detail:(NSString *)detail buttons:(NSArray<UIButton *> *)buttons type:(BUKMessageBarType)type;
+- (instancetype)initWithTitle:(NSString *)title 
+                       detail:(NSString *)detail 
+                         type:(BUKMessageBarType)type;
+- (instancetype)initWithTitle:(NSString *)title 
+                       detail:(NSString *)detail 
+                      buttons:(NSArray<UIButton *> *)buttons 
+                      handler:(void (^)(UIButton *button, NSInteger buttonIndex))block
+                         type:(BUKMessageBarType)type;
 - (void)showAnimated:(BOOL)animated completion:(void (^)())completion;
 - (void)dismissAnimated:(BOOL)animated completion:(void (^)())completion;
 
