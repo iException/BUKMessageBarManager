@@ -62,6 +62,9 @@
     self.titleLabel.text = title;
     self.detailLabel.text = detail;
     self.backgroundColor = [UIColor buk_messageBar_background];
+    self.layer.shadowOpacity = 1.0;
+    self.layer.shadowOffset = CGSizeMake(0, 0);
+    self.layer.shadowRadius = 4.0; 
     self.layer.cornerRadius = kRadius;
     [self addSubvews];
     [self setupFrame];
