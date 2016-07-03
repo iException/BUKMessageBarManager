@@ -7,7 +7,7 @@
 //
 
 #import "BUKViewController.h"
-#import "BUKMessageBarManager/BUKMessageBarManager.h"
+#import "BUKMessageBarManager.h"
 
 @interface BUKViewController ()
 
@@ -22,27 +22,22 @@
     [super viewDidLoad];
 }
 
-- (IBAction)toggle:(id)sender {
-    UIButton *copyButton = [[UIButton alloc] init];
-    [copyButton setTitle:@"copy" forState:UIControlStateNormal];
-    [copyButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    copyButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    
-    UIButton *dismissButton = [[UIButton alloc] init];
-    [dismissButton setTitle:@"dismiss" forState:UIControlStateNormal];
-    [dismissButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    dismissButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    
+- (IBAction)toggle:(id)sender {    
     self.bar = [BUKMessageBarManager showMessageWithTitle:@"/home" 
-                                                   detail:@"home view did selectedhome view did selectedhome view did selectedhome view did selectedhome view did selectedhome view did selected" 
-                                                  buttons:@[copyButton, dismissButton] 
-                                                  handler:^(UIButton *button, NSInteger buttonIndex) {
-                                                      if (buttonIndex == 0) {
-                                                      } else if (buttonIndex == 1) {
-                                                          [self.bar dismissAnimated:YES completion:nil];
-                                                      }
-                                                  } 
-                                                     type:BUKMessageBarTypeSuccess 
-                                                 duration:3.0];
+                                                   detail:@"home view did selectedhome view did selectedhome view did selectedhome view did selectedhome view did selectedhome view did selected home view did selectedhome view did selectedhome view did selectedhome view did selectedhome view did selectedhome view did selected" 
+                                                  buttons:@[
+                                                            [BUKMessageBarButton buttonWithTitle:@"copy" 
+                                                                                            type:BUKMessageBarButtonTypeDefault 
+                                                                                         handler:^(BUKMessageBarButton *button) {
+                                                                                             [button.bar dismissAnimated:YES completion:nil];
+                                                                                         }],
+                                                            [BUKMessageBarButton buttonWithTitle:@"dismiss" 
+                                                                                            type:BUKMessageBarButtonTypeDestructive 
+                                                                                         handler:^(BUKMessageBarButton *button) {
+                                                                                             [button.bar dismissAnimated:YES completion:nil];
+                                                                                         }]
+                                                            ] 
+                                                     type:BUKMessageBarTypeInfo 
+                                                 duration:99999.0];
 }
 @end

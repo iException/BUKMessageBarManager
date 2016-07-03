@@ -9,13 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "BUKMessageBar.h"
 
-
 @interface BUKMessageBarManager : NSObject
-
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
-                      detail:(NSString *)detail 
-                                buttons:(NSArray<UIButton *> *)buttons 
-                                handler:(void (^)(UIButton *button, NSInteger buttonIndex))block
+                                 detail:(NSString *)detail 
+                                buttons:(NSArray<BUKMessageBarButton *> *)buttons                         
                                    type:(BUKMessageBarType)type
                                duration:(NSTimeInterval)duration;
 

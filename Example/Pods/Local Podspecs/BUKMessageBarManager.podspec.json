@@ -12,7 +12,7 @@
     "monzy613": "monzy613@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/BUKMessageBarManager.git",
+    "git": "https://github.com/iException/BUKMessageBarManager.git",
     "tag": "0.1.0"
   },
   "platforms": {

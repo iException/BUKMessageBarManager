@@ -24,15 +24,13 @@
 @end
 
 @implementation BUKMessageBarManager
-
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
-                                buttons:(NSArray<UIButton *> *)buttons 
-                                handler:(void (^)(UIButton *button, NSInteger buttonIndex))block 
+                                buttons:(NSArray<BUKMessageBarButton *> *)buttons                         
                                    type:(BUKMessageBarType)type
                                duration:(NSTimeInterval)duration
 {
-    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail buttons:buttons handler:block type:type];
+    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type buttons:buttons];
     [self showBar:bar duration:duration];
     return bar;
 }

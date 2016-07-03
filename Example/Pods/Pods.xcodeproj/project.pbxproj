@@ -47,20 +47,6 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>04087A11AF9DB1A84C2DF376DC2EE2F0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>16E027B0F218961C3A1C79EAF0BE0457</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>053DAADB352FD452755C447A333EBB30</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -154,6 +140,13 @@
 			<string>Pods-BUKMessageBarManager_Tests-acknowledgements.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08B90CF59CFAEDC9156915F5A432FF92</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3909B2B42B041F06D82EEAF7963BD801</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>0ACDCBCB0B6796575F46FFA2F5410C6B</key>
 		<dict>
@@ -376,19 +369,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>16E027B0F218961C3A1C79EAF0BE0457</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BUKMessageBar.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>17B8CCC49F78C5C41182996882E3C62A</key>
 		<dict>
 			<key>fileRef</key>
@@ -411,12 +391,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1B25FF6CC13938E529F09B81CFDB2F7C</key>
+		<key>19B6FAA6411C5C9AA48C95D73295968E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>790A35E02F9E6BACB12CE2C8BA001702</string>
+			<key>children</key>
+			<array>
+				<string>8772BE5D5CFB863B8A73E25A7571ECA0</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>BUKMessageBarManager</string>
+			<key>path</key>
+			<string>BUKMessageBarManager</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1BC43012023F60AE2131A5FA32A309DA</key>
 		<dict>
@@ -607,19 +595,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>23776CDFFA2939EDB7AD19EC9ACFD461</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BUKMessageBar.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>24FD135C2B496EDBEC67A0FFEAE7A767</key>
 		<dict>
 			<key>fileRef</key>
@@ -640,6 +615,20 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>252D2A13B82076BABA915CC722C3FF29</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>ED85172D4D9ED60CD978F46CA74588CF</string>
+				<string>D1E62FCE6CF8F15E93CBE146DAF36F0B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>25B39889271AFA26042EA0FE33AB0246</key>
 		<dict>
@@ -839,6 +828,23 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>30A4E404379568EDD2D40E86ECC7FCC5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3EFFF97FEB8F77CC3212B6A1F9C63684</string>
+				<string>B255DD13BFA675201CF1263631FB78BC</string>
+				<string>6E5CD622DE0B0515D7B44A2175FFA06C</string>
+				<string>43AD0256D5F486C4833845AEF6B9D9EC</string>
+				<string>08B90CF59CFAEDC9156915F5A432FF92</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>31617BBD62045EC9ED5CE9BA148C5B96</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -888,6 +894,93 @@
 			<string>993873D0B5A72018C078B68756896F1F</string>
 			<key>remoteInfo</key>
 			<string>BlocksKit</string>
+		</dict>
+		<key>34206EF78819D717AE22A3B6B2D29D18</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BUKMessageBarManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3443796E23F83718232AFE0BCCC93897</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3C31EC8DEE7529CF44095E612AFC9B61</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/BUKMessageBarManager/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>BUKMessageBarManager</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>34D49CBE0FE43924451B86036CB0221B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69030A4224B88EBEFD894130D1BDA8E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>363F710FA1E5CCE02539936B19BF0BD9</key>
 		<dict>
@@ -939,6 +1032,19 @@
 			<string>776C74BA5838CF72651A2A5D19FD742B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>3909B2B42B041F06D82EEAF7963BD801</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>UIColor+bukmbmhex.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>39C976C6F1398FF645244996F0B391B3</key>
 		<dict>
@@ -1019,6 +1125,27 @@
 		<dict>
 			<key>fileRef</key>
 			<string>C48922322F6969482C87324B41FA9A3C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3D693976B87040B9FB6E8C1A3F73F95E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4A9788032F7BDCFF2833B3FA690F14B5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>3EFFF97FEB8F77CC3212B6A1F9C63684</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F2D8EF93C315BC0B66C9CDEB89F7E15F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1167,6 +1294,13 @@
 				</array>
 			</dict>
 		</dict>
+		<key>43AD0256D5F486C4833845AEF6B9D9EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>470A2C37D5B003BDBFA92DCB29586D41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>45E31ED697D188760DEBF7493DF0E880</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1196,6 +1330,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>470A2C37D5B003BDBFA92DCB29586D41</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BUKMessageBarManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>4780F028F149FCBC978BE631FD0263D9</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1210,13 +1357,6 @@
 			<string>BlocksKit/UIKit/UIAlertView+BlocksKit.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>47E971B11C2245E631103E61998B5C86</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A425E4EBE97A188141CC151931123FF7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>4817F559FCC4D30029A98B835D4DD30B</key>
 		<dict>
@@ -1342,6 +1482,19 @@
 			<string>NSObject+BKBlockObservation.h</string>
 			<key>path</key>
 			<string>BlocksKit/Core/NSObject+BKBlockObservation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4A9788032F7BDCFF2833B3FA690F14B5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>UIColor+bukmbmhex.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1509,6 +1662,66 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>4E9A395BC2F7B88ED363491CD23FD97F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3C31EC8DEE7529CF44095E612AFC9B61</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/BUKMessageBarManager/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>BUKMessageBarManager</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
 		<key>501E29F96446A338A6F57AD6845FDE2E</key>
 		<dict>
 			<key>fileRef</key>
@@ -1551,20 +1764,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>547234BC341900BB7A32D11607A6E945</key>
+		<key>55CBDDA668D39A6614C171BC3B5750F3</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>04087A11AF9DB1A84C2DF376DC2EE2F0</string>
-				<string>8578FACDF620FF3E2FE445A30383E471</string>
-				<string>DEABADEE5EB9FF90125486FC1DBA3999</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BUKMessageBarButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>56A1EB522F44D1D45425CA2AC6A42902</key>
 		<dict>
@@ -1646,21 +1857,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>5B8A678EE3C4A64E9559D3C8C3D2FEDB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F48F25B53485848F44B682149017177E</string>
-				<string>47E971B11C2245E631103E61998B5C86</string>
-				<string>FFFEDB5939DC7CD7DF36A73F7E5A9512</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>5C0751EA21477BCE2A05EDE90AA09724</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1687,17 +1883,6 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
-		</dict>
-		<key>5F8A8549D39E0521DF5C1B711B99F24F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>BlocksKit</string>
-			<key>target</key>
-			<string>993873D0B5A72018C078B68756896F1F</string>
-			<key>targetProxy</key>
-			<string>CE6E3BAA897E8D402C0E1A09363CD929</string>
 		</dict>
 		<key>6232CB4FC458BF3ED80BC327A2D9BED1</key>
 		<dict>
@@ -1798,23 +1983,12 @@
 				</array>
 			</dict>
 		</dict>
-		<key>6E08378FC33B6411F95F5808C58060D8</key>
+		<key>6E5CD622DE0B0515D7B44A2175FFA06C</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>16E027B0F218961C3A1C79EAF0BE0457</string>
-				<string>23776CDFFA2939EDB7AD19EC9ACFD461</string>
-				<string>EB5191C3E4167ABE27CF00CF649BB744</string>
-				<string>F3536C6C3AFA578C302DACF8152F6F4C</string>
-			</array>
+			<key>fileRef</key>
+			<string>A425E4EBE97A188141CC151931123FF7</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>7094EB0D7D0BFD0270453B8FC6E56DCA</key>
 		<dict>
@@ -1837,6 +2011,20 @@
 			<string>56A1EB522F44D1D45425CA2AC6A42902</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>722E3A44B17496AFD92BE1B89CA91BDC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>3443796E23F83718232AFE0BCCC93897</string>
+				<string>4E9A395BC2F7B88ED363491CD23FD97F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>725651DC49403B9EB8077621C03607A8</key>
 		<dict>
@@ -1922,65 +2110,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>76F12D3CD55ECC478BC5A8AD33E387A6</key>
+		<key>762074E280048105806DA41A170D1574</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3C31EC8DEE7529CF44095E612AFC9B61</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/BUKMessageBarManager/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>BUKMessageBarManager</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>993873D0B5A72018C078B68756896F1F</string>
+			<key>remoteInfo</key>
+			<string>BlocksKit</string>
 		</dict>
 		<key>776C74BA5838CF72651A2A5D19FD742B</key>
 		<dict>
@@ -2108,7 +2249,7 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>D95FF78171176B28AFC29497E0B5A20A</string>
+				<string>19B6FAA6411C5C9AA48C95D73295968E</string>
 				<string>D6E64102B37418C70F7D8E8459C91A2C</string>
 			</array>
 			<key>isa</key>
@@ -2120,6 +2261,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>801ABB5ADFC6C67A3B2CE399EAF8D366</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D109160F3F339B553026D28D77D37EE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>80515FC6421EB409D6EFCF564105F555</key>
 		<dict>
 			<key>containerPortal</key>
@@ -2129,7 +2284,7 @@
 			<key>proxyType</key>
 			<string>1</string>
 			<key>remoteGlobalIDString</key>
-			<string>F9387522F069CC2B10E449D82670DC0D</string>
+			<string>8B0BF20877B90E186CDDB9DFD63105C5</string>
 			<key>remoteInfo</key>
 			<string>BUKMessageBarManager</string>
 		</dict>
@@ -2228,20 +2383,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8578FACDF620FF3E2FE445A30383E471</key>
-		<dict>
-			<key>fileRef</key>
-			<string>69030A4224B88EBEFD894130D1BDA8E6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>85D894CC4678CC17890FEBE477B3B126</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -2314,12 +2455,54 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8B2B465F432814A067DF277BD1078A87</key>
+		<key>8772BE5D5CFB863B8A73E25A7571ECA0</key>
 		<dict>
-			<key>fileRef</key>
-			<string>3BF6FC59ED85C6460FCFB45DC4C7C6A3</string>
+			<key>children</key>
+			<array>
+				<string>9D109160F3F339B553026D28D77D37EE</string>
+				<string>F2D8EF93C315BC0B66C9CDEB89F7E15F</string>
+				<string>983B9B62CE1F4E4293A3D419B96D5954</string>
+				<string>55CBDDA668D39A6614C171BC3B5750F3</string>
+				<string>34206EF78819D717AE22A3B6B2D29D18</string>
+				<string>470A2C37D5B003BDBFA92DCB29586D41</string>
+				<string>4A9788032F7BDCFF2833B3FA690F14B5</string>
+				<string>3909B2B42B041F06D82EEAF7963BD801</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8B0BF20877B90E186CDDB9DFD63105C5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>722E3A44B17496AFD92BE1B89CA91BDC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>30A4E404379568EDD2D40E86ECC7FCC5</string>
+				<string>252D2A13B82076BABA915CC722C3FF29</string>
+				<string>C3A2BA8C5E8179687C108439DEBAB015</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>9F7C72ADF387F8965C217BEA6072EAA5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>BUKMessageBarManager</string>
+			<key>productName</key>
+			<string>BUKMessageBarManager</string>
+			<key>productReference</key>
+			<string>03E69ED45A5CE0105FA9C96623AA1C5E</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>8B3FD1C887D568CCFDDC228B9AC5A05C</key>
 		<dict>
@@ -2412,20 +2595,6 @@
 			<string>F1C0D631380EF6223647607BBE1226DA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>9051AA7D68B039E81E59C63630FB02B1</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>76F12D3CD55ECC478BC5A8AD33E387A6</string>
-				<string>F60DC3A293DC5D92A8139814A856FD18</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
 		<key>90DF235896E49288DADE4F06A23D6FB6</key>
 		<dict>
@@ -2546,6 +2715,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>983B9B62CE1F4E4293A3D419B96D5954</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BUKMessageBarButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>98A22970CEA1C961C52320F2089503B6</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2640,6 +2822,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>9D109160F3F339B553026D28D77D37EE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BUKMessageBar.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>9DBEE84E593E0BDC428C56EACE93B580</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2707,6 +2902,17 @@
 			<string>BlocksKit/Core/BKMacros.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F7C72ADF387F8965C217BEA6072EAA5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>BlocksKit</string>
+			<key>target</key>
+			<string>993873D0B5A72018C078B68756896F1F</string>
+			<key>targetProxy</key>
+			<string>762074E280048105806DA41A170D1574</string>
 		</dict>
 		<key>A098C58AAACF5DA421659B3F6024C76F</key>
 		<dict>
@@ -2884,6 +3090,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>B255DD13BFA675201CF1263631FB78BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>55CBDDA668D39A6614C171BC3B5750F3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>B2A3827E16BC8D56C7FAFE3D2FB3704A</key>
 		<dict>
 			<key>fileRef</key>
@@ -3054,6 +3267,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>C3A2BA8C5E8179687C108439DEBAB015</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>801ABB5ADFC6C67A3B2CE399EAF8D366</string>
+				<string>C925BBB11A4CFAB133F6DFECB623A275</string>
+				<string>34D49CBE0FE43924451B86036CB0221B</string>
+				<string>EEBC0951D7C33D47C4D53223BA2F6CA8</string>
+				<string>3D693976B87040B9FB6E8C1A3F73F95E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>C48922322F6969482C87324B41FA9A3C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3089,6 +3319,20 @@
 			<string>4099AD9C0A1BE979EFE49F9EB2F72225</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>C925BBB11A4CFAB133F6DFECB623A275</key>
+		<dict>
+			<key>fileRef</key>
+			<string>983B9B62CE1F4E4293A3D419B96D5954</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>C9C05BE467CA772FE6838DD8AEE6536F</key>
 		<dict>
@@ -3129,18 +3373,12 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CE6E3BAA897E8D402C0E1A09363CD929</key>
+		<key>D1E62FCE6CF8F15E93CBE146DAF36F0B</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>fileRef</key>
+			<string>3BF6FC59ED85C6460FCFB45DC4C7C6A3</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>993873D0B5A72018C078B68756896F1F</string>
-			<key>remoteInfo</key>
-			<string>BlocksKit</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>D3E3D092A3FF7311A98E44BBA36FFD12</key>
 		<dict>
@@ -3256,7 +3494,7 @@
 			<key>targets</key>
 			<array>
 				<string>993873D0B5A72018C078B68756896F1F</string>
-				<string>F9387522F069CC2B10E449D82670DC0D</string>
+				<string>8B0BF20877B90E186CDDB9DFD63105C5</string>
 				<string>8C8D63834F2C769FDCA54153995025D3</string>
 				<string>E43710CD418EAD6C4D7F95E44A3F409C</string>
 			</array>
@@ -3305,35 +3543,6 @@
 			<string>Support Files</string>
 			<key>path</key>
 			<string>Example/Pods/Target Support Files/BUKMessageBarManager</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D883BCD78E4EAEC6F5DB5142FA49C22A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1B25FF6CC13938E529F09B81CFDB2F7C</string>
-				<string>8B2B465F432814A067DF277BD1078A87</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D95FF78171176B28AFC29497E0B5A20A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6E08378FC33B6411F95F5808C58060D8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>BUKMessageBarManager</string>
-			<key>path</key>
-			<string>BUKMessageBarManager</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3387,20 +3596,6 @@
 			<string>BlocksKit/BlocksKit.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEABADEE5EB9FF90125486FC1DBA3999</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EB5191C3E4167ABE27CF00CF649BB744</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>DFA12AD2A66F5FB8CA0E399909840888</key>
 		<dict>
@@ -3562,19 +3757,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EB5191C3E4167ABE27CF00CF649BB744</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BUKMessageBarManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>EC2C1E07D67F223590A6CD9EDE9AEBD7</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3605,12 +3787,33 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>ED85172D4D9ED60CD978F46CA74588CF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>790A35E02F9E6BACB12CE2C8BA001702</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>EE2FD1FBFA0276A88D055F8B8960809A</key>
 		<dict>
 			<key>fileRef</key>
 			<string>05E46A9DD87B817B790AA73FDF3811A1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>EEBC0951D7C33D47C4D53223BA2F6CA8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>34206EF78819D717AE22A3B6B2D29D18</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>EFBC0672F3B8A4645233D20BB7385A72</key>
 		<dict>
@@ -3673,6 +3876,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>F2D8EF93C315BC0B66C9CDEB89F7E15F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BUKMessageBar.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>F3067227D0CB23C6E882D7F86216FC3D</key>
 		<dict>
 			<key>children</key>
@@ -3694,19 +3910,6 @@
 			<string>Pods-BUKMessageBarManager_Example</string>
 			<key>path</key>
 			<string>Target Support Files/Pods-BUKMessageBarManager_Example</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F3536C6C3AFA578C302DACF8152F6F4C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BUKMessageBarManager.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3752,13 +3955,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>F48F25B53485848F44B682149017177E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>23776CDFFA2939EDB7AD19EC9ACFD461</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>F4B23F3679A5C4BE252CE0510ADF4229</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3773,66 +3969,6 @@
 			<string>BlocksKit/Core/NSMutableOrderedSet+BlocksKit.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F60DC3A293DC5D92A8139814A856FD18</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3C31EC8DEE7529CF44095E612AFC9B61</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/BUKMessageBarManager/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/BUKMessageBarManager/BUKMessageBarManager.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>BUKMessageBarManager</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
 		</dict>
 		<key>F7572C0EFBA0B2FBD833F528D1B6958D</key>
 		<dict>
@@ -3854,33 +3990,6 @@
 			<string>B61A3798D035F50567AEDBA0CA92690A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>F9387522F069CC2B10E449D82670DC0D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>9051AA7D68B039E81E59C63630FB02B1</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5B8A678EE3C4A64E9559D3C8C3D2FEDB</string>
-				<string>D883BCD78E4EAEC6F5DB5142FA49C22A</string>
-				<string>547234BC341900BB7A32D11607A6E945</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5F8A8549D39E0521DF5C1B711B99F24F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BUKMessageBarManager</string>
-			<key>productName</key>
-			<string>BUKMessageBarManager</string>
-			<key>productReference</key>
-			<string>03E69ED45A5CE0105FA9C96623AA1C5E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>F9EB6FBFA769BDBBC6E04A8CE609AA40</key>
 		<dict>
@@ -3965,7 +4074,7 @@
 			<key>name</key>
 			<string>BUKMessageBarManager</string>
 			<key>target</key>
-			<string>F9387522F069CC2B10E449D82670DC0D</string>
+			<string>8B0BF20877B90E186CDDB9DFD63105C5</string>
 			<key>targetProxy</key>
 			<string>80515FC6421EB409D6EFCF564105F555</string>
 		</dict>
@@ -4100,13 +4209,6 @@
 		<dict>
 			<key>fileRef</key>
 			<string>636834106850F15B29F81B07BF8EEC74</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FFFEDB5939DC7CD7DF36A73F7E5A9512</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F3536C6C3AFA578C302DACF8152F6F4C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>

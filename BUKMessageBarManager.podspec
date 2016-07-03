@@ -14,19 +14,12 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/iException/BUKMessageBarManager'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'monzy613' => 'monzy613@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/BUKMessageBarManager.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/iException/BUKMessageBarManager.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '7.0'
 
   s.source_files = 'BUKMessageBarManager/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'BUKMessageBarManager' => ['BUKMessageBarManager/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'BlocksKit'
+# s.dependency 'MZGoogleStyleButton', :git => 'https://github.com/monzy613/MZGoogleStyleButton.git'
 end

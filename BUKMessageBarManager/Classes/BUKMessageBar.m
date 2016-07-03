@@ -7,10 +7,14 @@
 //
 
 #import "BUKMessageBar.h"
-#import "UIControl+BlocksKit.h"
+#import "UIColor+bukmbmhex.h"
 
 #define kStatusBarHeight 20.0
-#define kButtonHeight 35.0
+#define kButtonContainerHeight 35.0
+#define kPadding 10.0
+#define kButtonSpace 10.0
+#define kButtonTopPadding 6.0
+#define kRadius 10.0
 
 @interface BUKMessageBar ()
 
@@ -18,7 +22,8 @@
 @property (nonatomic, strong) UILabel *detailLabel;
 @property (nonatomic, strong) UIView *labelsContainerView;
 @property (nonatomic, strong) UIView *buttonsContainerView;
-@property (nonatomic, strong) NSArray<UIButton *> *buttons;
+@property (nonatomic, strong) NSArray<BUKMessageBarButton *> *buttons;
+@property (nonatomic, strong) CAShapeLayer *titleBackgroundLayer;
 
 @end
 
@@ -40,38 +45,26 @@
 
 - (instancetype)initWithTitle:(NSString *)title 
                        detail:(NSString *)detail 
-                      buttons:(NSArray<UIButton *> *)buttons 
-                      handler:(void (^)(UIButton *button, NSInteger buttonIndex))block
                          type:(BUKMessageBarType)type
+                      buttons:(NSArray<BUKMessageBarButton *> *)buttons
 {
     self = [super init];
     if (self) {
         self.buttons = buttons;
         self.type = type;
         [self initUIWithTitle:title detail:detail];
-        [self setupButtonAction:block];
     }
-    return self;
+    return self;    
 }
 
 - (void)initUIWithTitle:(NSString *)title detail:(NSString *)detail
 {
     self.titleLabel.text = title;
     self.detailLabel.text = detail;
+    self.backgroundColor = [UIColor buk_messageBar_background];
+    self.layer.cornerRadius = kRadius;
     [self addSubvews];
     [self setupFrame];
-}
-
-- (void)setupButtonAction:(void (^)(UIButton *button, NSInteger buttonIndex))block
-{
-    if (!block) {
-        return;
-    }
-    [self.buttons enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj bk_addEventHandler:^(id sender) {
-            block(obj, idx);
-        } forControlEvents:UIControlEventTouchUpInside];
-    }];
 }
 
 - (void)showAnimated:(BOOL)animated completion:(void (^)())completion
@@ -81,6 +74,8 @@
     }
     self.isShow = true;
     CGRect frame = self.bounds;
+    frame.origin.y += kStatusBarHeight;
+    frame.origin.x += kPadding;
     [self setFrame:frame animated:animated completion:completion];
 }
 
@@ -92,6 +87,7 @@
     self.isShow = false;
     CGRect frame = self.bounds;
     frame.origin.y -= CGRectGetHeight(frame);
+    frame.origin.x += kPadding;
     [self setFrame:frame animated:animated completion:completion];
 }
 
@@ -134,26 +130,61 @@
 
 - (void)setupFrame
 {
-    CGRect titleFrame = [self.titleLabel textRectForBounds:[UIScreen mainScreen].bounds limitedToNumberOfLines:0];
-    titleFrame.origin.y = kStatusBarHeight;
-    CGRect detailFrame = [self.detailLabel textRectForBounds:[UIScreen mainScreen].bounds limitedToNumberOfLines:0];
-    detailFrame.origin.y = titleFrame.origin.y + CGRectGetHeight(titleFrame);
-    CGFloat labelsHeight = kStatusBarHeight + CGRectGetHeight(titleFrame) + CGRectGetHeight(detailFrame);
+    CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds) - 2 * kPadding;
+    CGRect textBoundRect = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds) - 4 * kPadding, CGRectGetHeight([UIScreen mainScreen].bounds));
+    CGPoint origin = CGPointMake(kPadding, kPadding + kStatusBarHeight);
+    CGRect titleFrame = [self.titleLabel textRectForBounds:textBoundRect limitedToNumberOfLines:0];
+    titleFrame.origin.y = kPadding;
+    titleFrame.origin.x = kPadding;
+    CGRect detailFrame = [self.detailLabel textRectForBounds:textBoundRect limitedToNumberOfLines:0];
+    detailFrame.origin.y = titleFrame.origin.y + CGRectGetHeight(titleFrame) + kPadding;
+    detailFrame.origin.x = kPadding;
+    CGFloat labelsHeight = kStatusBarHeight + kPadding + CGRectGetHeight(titleFrame) + CGRectGetHeight(detailFrame);
     
     self.titleLabel.frame = titleFrame;
     self.detailLabel.frame = detailFrame;
-    self.labelsContainerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), labelsHeight);
-    CGFloat height = CGRectGetHeight(self.labelsContainerView.frame); 
+    self.labelsContainerView.frame = CGRectMake(0, 0, width, labelsHeight);
+        
+    CGRect titleBackgroundFrame = CGRectMake(0, 0, width, CGRectGetHeight(titleFrame) + 1.5 * kPadding);
+    [self setupTitleBackgroundLayerWithFrame:titleBackgroundFrame];
+        
+    CGFloat height = CGRectGetHeight(self.labelsContainerView.frame);
+    
     if (self.buttons.count) {
-        self.buttonsContainerView.frame = CGRectMake(0, labelsHeight, CGRectGetWidth([UIScreen mainScreen].bounds), kButtonHeight);
+        self.buttonsContainerView.frame = CGRectMake(0, labelsHeight, width, kButtonContainerHeight);
         height += CGRectGetHeight(self.buttonsContainerView.frame); 
-        CGFloat buttonWidth = CGRectGetWidth([UIScreen mainScreen].bounds) / self.buttons.count;
-        [self.buttons enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            CGRect buttonFrame = CGRectMake(idx * buttonWidth, 0, buttonWidth, kButtonHeight);
+        CGFloat buttonWidth = (width - kButtonSpace * (self.buttons.count + 1)) / self.buttons.count;
+        [self.buttons enumerateObjectsUsingBlock:^(BUKMessageBarButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            CGRect buttonFrame = CGRectMake(idx * buttonWidth + kButtonSpace * (idx + 1), kButtonTopPadding, buttonWidth, kButtonContainerHeight - kButtonTopPadding * 2);
+            obj.bar = self;
             obj.frame = buttonFrame;
         }];
     }
-    self.frame = CGRectMake(0, -height, CGRectGetWidth([UIScreen mainScreen].bounds), height);
+    self.frame = CGRectMake(kPadding, -height, width, height);
+}
+
+- (void)setupTitleBackgroundLayerWithFrame:(CGRect)frame
+{
+    if (!_titleBackgroundLayer) {
+        _titleBackgroundLayer = [CAShapeLayer layer];
+    }
+    _titleBackgroundLayer.frame = frame;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:frame 
+                                               byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight 
+                                                     cornerRadii:CGSizeMake(kRadius, kRadius)];
+    _titleBackgroundLayer.path = path.CGPath;
+    switch (self.type) {
+        case BUKMessageBarTypeSuccess:
+            _titleBackgroundLayer.fillColor = [UIColor buk_tb_successColor].CGColor;
+            break;
+        case BUKMessageBarTypeFailed:
+            _titleBackgroundLayer.fillColor = [UIColor buk_tb_failedColor].CGColor;
+            break;
+        case BUKMessageBarTypeInfo:
+            _titleBackgroundLayer.fillColor = [UIColor buk_tb_infoColor].CGColor;
+            break;
+    }
+    [_labelsContainerView.layer insertSublayer:_titleBackgroundLayer atIndex:0];
 }
 
 #pragma mark - getters -
@@ -162,7 +193,7 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.textColor = [UIColor blackColor];
-        _titleLabel.font = [UIFont boldSystemFontOfSize:14];
+        _titleLabel.font = [UIFont fontWithName:@"Avenir-Light" size:14];
         _titleLabel.numberOfLines = 0;
     }
     return _titleLabel;
@@ -173,7 +204,7 @@
     if (!_detailLabel) {
         _detailLabel = [[UILabel alloc] init];
         _detailLabel.textColor = [UIColor blackColor];
-        _detailLabel.font = [UIFont systemFontOfSize:11];
+        _detailLabel.font = [UIFont fontWithName:@"Avenir-Light" size:11];
         _detailLabel.numberOfLines = 0;
     }
     return _detailLabel;
@@ -183,17 +214,6 @@
 {
     if (!_labelsContainerView) {
         _labelsContainerView = [[UIView alloc] init];
-        switch (self.type) {
-            case BUKMessageBarTypeSuccess:
-                _labelsContainerView.backgroundColor = [UIColor greenColor];
-                break;
-            case BUKMessageBarTypeFailed:
-                _labelsContainerView.backgroundColor = [UIColor redColor];
-                break;
-            case BUKMessageBarTypeInfo:
-                _labelsContainerView.backgroundColor = [UIColor magentaColor];
-                break;
-        }
     }
     return _labelsContainerView;
 }
