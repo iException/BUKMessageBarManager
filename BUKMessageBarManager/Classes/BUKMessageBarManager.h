@@ -13,12 +13,14 @@
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
                                 buttons:(NSArray<BUKMessageBarButton *> *)buttons                         
-                                   type:(BUKMessageBarType)type
+                                   type:(BUKMessageBarType)type 
+                               expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration;
 
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
-                                   type:(BUKMessageBarType)type
+                                   type:(BUKMessageBarType)type 
+                               expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration;
 
 @end

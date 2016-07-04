@@ -38,6 +38,7 @@
                                                                                          }]
                                                             ] 
                                                      type:BUKMessageBarTypeInfo 
+                                                 expanded:NO 
                                                  duration:99999.0];
 }
 @end

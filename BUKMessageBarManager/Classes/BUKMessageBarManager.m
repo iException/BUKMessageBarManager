@@ -27,20 +27,22 @@
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
                                 buttons:(NSArray<BUKMessageBarButton *> *)buttons                         
-                                   type:(BUKMessageBarType)type
+                                   type:(BUKMessageBarType)type 
+                               expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration
 {
-    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type buttons:buttons];
+    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type buttons:buttons expanded:expanded];
     [self showBar:bar duration:duration];
     return bar;
 }
 
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail
-                                   type:(BUKMessageBarType)type
+                                   type:(BUKMessageBarType)type 
+                               expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration
 {
-    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type];
+    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type expanded:expanded];
     [self showBar:bar duration:duration];
     return bar;
 }
