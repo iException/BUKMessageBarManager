@@ -52,7 +52,7 @@
 
 + (UIColor *)buk_messageBarButton_okColor
 {
-    return [UIColor colorWithHex:@"84E027"];
+    return [UIColor buk_tb_infoColor];
 }
 
 + (UIColor *)buk_messageBarButton_destructiveColor
