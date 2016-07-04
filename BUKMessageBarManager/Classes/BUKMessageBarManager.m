@@ -26,23 +26,25 @@
 @implementation BUKMessageBarManager
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
-                                buttons:(NSArray<BUKMessageBarButton *> *)buttons                         
+                                buttons:(NSArray<BUKMessageBarButton *> *)buttons 
+                             tapHandler:(void(^)(BUKMessageBar *bar))tapHandler                         
                                    type:(BUKMessageBarType)type 
                                expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration
 {
-    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type buttons:buttons expanded:expanded];
+    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type buttons:buttons tapHandler:tapHandler expanded:expanded];
     [self showBar:bar duration:duration];
     return bar;
 }
 
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
-                                 detail:(NSString *)detail
+                                 detail:(NSString *)detail 
+                             tapHandler:(void(^)(BUKMessageBar *bar))tapHandler 
                                    type:(BUKMessageBarType)type 
                                expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration
 {
-    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type expanded:expanded];
+    BUKMessageBar *bar = [[BUKMessageBar alloc] initWithTitle:title detail:detail type:type tapHandler:tapHandler expanded:expanded];
     [self showBar:bar duration:duration];
     return bar;
 }

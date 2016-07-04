@@ -37,8 +37,10 @@
                                                                                              [button.bar dismissAnimated:YES completion:nil];
                                                                                          }]
                                                             ] 
-                                                     type:BUKMessageBarTypeInfo 
+                                               tapHandler:^(BUKMessageBar *bar) {
+                                                   [bar dismissAnimated:YES completion:nil];
+                                               } type:BUKMessageBarTypeInfo
                                                  expanded:NO 
-                                                 duration:99999.0];
+                                                 duration:10.0];
 }
 @end

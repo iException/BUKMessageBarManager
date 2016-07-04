@@ -12,13 +12,15 @@
 @interface BUKMessageBarManager : NSObject
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
-                                buttons:(NSArray<BUKMessageBarButton *> *)buttons                         
+                                buttons:(NSArray<BUKMessageBarButton *> *)buttons 
+                             tapHandler:(void(^)(BUKMessageBar *bar))tapHandler                         
                                    type:(BUKMessageBarType)type 
                                expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration;
 
 + (BUKMessageBar *)showMessageWithTitle:(NSString *)title 
                                  detail:(NSString *)detail 
+                             tapHandler:(void(^)(BUKMessageBar *bar))tapHandler 
                                    type:(BUKMessageBarType)type 
                                expanded:(BOOL)expanded
                                duration:(NSTimeInterval)duration;

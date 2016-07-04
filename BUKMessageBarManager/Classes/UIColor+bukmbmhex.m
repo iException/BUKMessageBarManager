@@ -32,7 +32,7 @@
 
 + (UIColor *)buk_tb_infoColor
 {
-    return [UIColor colorWithHex:@"4A90E2"];
+    return [UIColor colorWithHex:@"FF4466"];
 }
 
 + (UIColor *)buk_tb_failedColor

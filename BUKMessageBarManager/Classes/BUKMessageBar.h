@@ -25,12 +25,14 @@ typedef NS_ENUM(NSInteger, BUKMessageBarType) {
 - (instancetype)initWithTitle:(NSString *)title 
                        detail:(NSString *)detail 
                          type:(BUKMessageBarType)type 
+                   tapHandler:(void(^)(BUKMessageBar *bar))tapHandler
                      expanded:(BOOL)expanded;
 
 - (instancetype)initWithTitle:(NSString *)title 
                        detail:(NSString *)detail 
                          type:(BUKMessageBarType)type
                       buttons:(NSArray<BUKMessageBarButton *> *)buttons 
+                   tapHandler:(void(^)(BUKMessageBar *bar))tapHandler
                       expanded:(BOOL)expanded;
 
 - (void)showAnimated:(BOOL)animated completion:(void (^)())completion;

@@ -9,6 +9,7 @@
 #import "BUKMessageBar.h"
 #import "UIColor+bukmbmhex.h"
 #import "UIControl+Blockskit.h"
+#import "UIGestureRecognizer+Blockskit.h"
 
 #define kStatusBarHeight 20.0
 #define kButtonContainerHeight 35.0
@@ -43,13 +44,14 @@
 - (instancetype)initWithTitle:(NSString *)title 
                        detail:(NSString *)detail 
                          type:(BUKMessageBarType)type 
+                   tapHandler:(void(^)(BUKMessageBar *bar))tapHandler
                      expanded:(BOOL)expanded
 {
     self = [super init];
     if (self) {
         self.type = type;
         self.expanded = expanded;
-        [self setupWithTitle:title detail:detail];
+        [self setupWithTitle:title detail:detail tapHandler:tapHandler];
     }
     return self;
 }
@@ -58,14 +60,15 @@
                        detail:(NSString *)detail 
                          type:(BUKMessageBarType)type
                       buttons:(NSArray<BUKMessageBarButton *> *)buttons 
-                      expanded:(BOOL)expanded
+                   tapHandler:(void(^)(BUKMessageBar *bar))tapHandler
+                     expanded:(BOOL)expanded
 {
     self = [super init];
     if (self) {
         self.buttons = buttons;
         self.type = type;
         self.expanded = expanded;
-        [self setupWithTitle:title detail:detail];
+        [self setupWithTitle:title detail:detail tapHandler:tapHandler];
     }
     return self;
 }
@@ -101,14 +104,19 @@
 
 #pragma mark - private -
 
-- (void)setupWithTitle:(NSString *)title detail:(NSString *)detail
+- (void)setupWithTitle:(NSString *)title detail:(NSString *)detail tapHandler:(void(^)(BUKMessageBar *bar))tapHandler
 {
     self.titleLabel.text = title;
     self.detailLabel.text = detail;
     self.clipsToBounds = YES;
     self.layer.cornerRadius = kRadius;
     [self addSubvews];
-    [self setupFrame];    
+    [self setupFrame];
+    [self addGestureRecognizer:[UITapGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        if (tapHandler) {
+            tapHandler(self);
+        }
+    }]];
 }
 
 - (void)expandAnimated:(BOOL)animated expand:(BOOL)expand
