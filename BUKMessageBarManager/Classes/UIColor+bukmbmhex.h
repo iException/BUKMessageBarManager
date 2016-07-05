@@ -15,6 +15,7 @@
 + (UIColor *)buk_tb_successColor;
 + (UIColor *)buk_tb_infoColor;
 + (UIColor *)buk_tb_failedColor;
++ (UIColor *)buk_tb_lightColor;
 + (UIColor *)buk_messageBar_background;
 + (UIColor *)buk_messageBarButton_defaultColor;
 + (UIColor *)buk_messageBarButton_okColor;

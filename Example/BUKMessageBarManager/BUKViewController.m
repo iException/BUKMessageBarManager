@@ -7,6 +7,7 @@
 //
 
 #import "BUKViewController.h"
+#import "UIColor+bukmbmhex.h"
 #import "BUKMessageBarManager.h"
 
 @interface BUKViewController ()
@@ -20,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor buk_messageBarButton_okColor];
 }
 
 - (IBAction)toggle:(id)sender {    
@@ -39,7 +41,7 @@
                                                             ] 
                                                tapHandler:^(BUKMessageBar *bar) {
                                                    [bar dismissAnimated:YES completion:nil];
-                                               } type:BUKMessageBarTypeInfo
+                                               } type:BUKMessageBarTypeLight
                                                  expanded:NO 
                                                  duration:10.0];
 }

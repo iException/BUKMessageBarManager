@@ -16,7 +16,7 @@
 #define kPadding 10.0
 #define kButtonSpace 10.0
 #define kButtonTopPadding 6.0
-#define kRadius 10.0
+#define kRadius 6.0
 
 #define kTopButtonWidth 30.0
 #define kExpandButtonTitle @"展开"
@@ -34,6 +34,8 @@
 @property (nonatomic, strong) UIButton *toggleButton;
 @property (nonatomic, strong) UIButton *dismissButton;
 @property (nonatomic, assign) BOOL expanded;
+@property (nonatomic, assign) CGFloat expandHeight;
+@property (nonatomic, assign) CGFloat foldHeight;
 
 @end
 
@@ -128,17 +130,21 @@
     CATransform3D contentViewTransform;
     if (expand) {
         //expand
-        newFrame.size.height = CGRectGetHeight(self.titleContainerView.frame) + CGRectGetHeight(self.contentView.frame);
+        newFrame.size.height = self.expandHeight;
+        contentViewTransform = CATransform3DIdentity;
     } else {
         //fold
-        newFrame.size.height = CGRectGetHeight(self.titleContainerView.frame);
+        newFrame.size.height = self.foldHeight;
+        contentViewTransform = CATransform3DMakeScale(1.0, 0.01, 1.0);
     }
     if (animated) {
         [UIView animateWithDuration:0.25 animations:^{
             self.frame = newFrame;
+            self.contentView.layer.transform = contentViewTransform;
         } completion:nil];
     } else {
         self.frame = newFrame;
+        self.contentView.layer.transform = contentViewTransform;
     }
     self.expanded = expand;
 }
@@ -224,7 +230,8 @@
     CGFloat height = CGRectGetHeight(titleContainerFrame) + contentViewHeight;
     self.contentView.frame = CGRectMake(0, CGRectGetHeight(titleContainerFrame), width, contentViewHeight);
     self.frame = CGRectMake(kPadding, -height, width, height);
-    
+    self.expandHeight = height;
+    self.foldHeight = CGRectGetHeight(titleContainerFrame);
     if (!self.expanded) {
         self.expanded = YES;
         [self expandAnimated:NO expand:NO];
@@ -237,9 +244,10 @@
         _titleBackgroundLayer = [CAShapeLayer layer];
     }
     _titleBackgroundLayer.frame = frame;
+    
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:frame 
-                                               byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight 
-                                                     cornerRadii:CGSizeMake(kRadius, kRadius)];
+                                 byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight 
+                                       cornerRadii:CGSizeMake(kRadius, kRadius)];
     _titleBackgroundLayer.path = path.CGPath;
     switch (self.type) {
         case BUKMessageBarTypeSuccess:
@@ -250,6 +258,9 @@
             break;
         case BUKMessageBarTypeInfo:
             _titleBackgroundLayer.fillColor = [UIColor buk_tb_infoColor].CGColor;
+            break;
+        case BUKMessageBarTypeLight:
+            _titleBackgroundLayer.fillColor = [UIColor buk_tb_lightColor].CGColor;
             break;
     }
     [self.layer insertSublayer:_titleBackgroundLayer atIndex:0];
@@ -308,6 +319,7 @@
 {
     if (!_contentView) {
         _contentView = [[UIView alloc] init];
+        _contentView.layer.anchorPoint = CGPointMake(0.5, 0);
         _contentView.backgroundColor = [UIColor buk_messageBar_background];
     }
     return _contentView;
@@ -317,12 +329,16 @@
 {
     if (!_toggleButton) {
         _toggleButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_toggleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        if (_type == BUKMessageBarTypeLight) {
+            [_toggleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        } else {
+            [_toggleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        }
         _toggleButton.titleLabel.font = [UIFont systemFontOfSize:10];
         
         __weak typeof(self) weakSelf = self;
         [_toggleButton bk_addEventHandler:^(id sender) {
-            [self expandAnimated:YES expand:!self.expanded];
+            [weakSelf expandAnimated:YES expand:!self.expanded];
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _toggleButton;
@@ -332,7 +348,11 @@
 {
     if (!_dismissButton) {
         _dismissButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_dismissButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        if (_type == BUKMessageBarTypeLight) {
+            [_dismissButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        } else {
+            [_dismissButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        }
         [_dismissButton setTitle:@"关闭" forState:UIControlStateNormal];
         _dismissButton.titleLabel.font = [UIFont systemFontOfSize:10];
         

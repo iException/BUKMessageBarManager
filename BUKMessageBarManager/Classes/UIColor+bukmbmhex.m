@@ -40,6 +40,11 @@
     return [UIColor colorWithHex:@"FF0000"];
 }
 
++ (UIColor *)buk_tb_lightColor
+{
+    return [UIColor colorWithHex:@"EDECEC"];
+}
+
 + (UIColor *)buk_messageBar_background
 {
     return [UIColor colorWithHex:@"EDECEC"];

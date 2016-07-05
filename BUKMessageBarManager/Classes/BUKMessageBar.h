@@ -12,7 +12,8 @@
 typedef NS_ENUM(NSInteger, BUKMessageBarType) {
     BUKMessageBarTypeSuccess,
     BUKMessageBarTypeFailed,
-    BUKMessageBarTypeInfo
+    BUKMessageBarTypeInfo,
+    BUKMessageBarTypeLight
 };
 
 @interface BUKMessageBar : UIView
